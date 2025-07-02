@@ -11,8 +11,8 @@ async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def admin_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_user.id in config.ADMINS:
         count = db.count_users()
-        await update.message.reply_text(f"🔒 پنل مدیریت
-تعداد کاربران ثبت‌شده: {count}")
+      await update.message.reply_text(f"🔒 پنل مدیریت\nتعداد کاربران ثبت‌شده: {count}")
+
     else:
         await update.message.reply_text("⛔ شما ادمین نیستید.")
 
